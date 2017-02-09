@@ -2,9 +2,11 @@ const webpack = require('webpack');
 const conf = require('./gulp.conf');
 const path = require('path');
 
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FailPlugin = require('webpack-fail-plugin');
 const autoprefixer = require('autoprefixer');
+
 
 module.exports = {
   module: {
@@ -23,12 +25,10 @@ module.exports = {
       },
       {
         test: /\.(css|less)$/,
-        loaders: [
-          'style-loader',
-          'css-loader',
-          'less-loader',
-          'postcss-loader'
-        ]
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader', 
+          loader:['css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader', 'less-loader']
+        }) 
       },
       {
         test: /\.js$/,
@@ -41,6 +41,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new ExtractTextPlugin({filename: 'style.css', allChunks: true }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     FailPlugin,

@@ -1,33 +1,26 @@
 import React, {Component} from 'react';
-import {Header} from './header';
-import {Title} from './title';
-import {Techs} from './techs/techs';
-import {Footer} from './footer';
-
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100%'
-  },
-  main: {
-    flex: 1,
-    display: 'flex',
-    flexDirection: 'column'
-  }
-};
+import {Header} from './organisms/header';
+import {Footer} from './organisms/footer';
+import {Sidebar} from './organisms/sidebar';
+import styles from './main.less';
 
 export class Main extends Component {
   render() {
     return (
-      <div style={styles.container}>
+      <div className={styles.container}>
         <Header/>
-        <main style={styles.main}>
-          <Title/>
-          <Techs/>
+        <main className={styles.main}>
+          <Sidebar/>
+          <section className="pageContainer">
+            {this.props.children}
+          </section>
         </main>
         <Footer/>
       </div>
     );
   }
 }
+
+Main.propTypes = {
+  children: React.PropTypes.object.isRequired
+};
