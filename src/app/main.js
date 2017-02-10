@@ -11,7 +11,7 @@ export class Main extends Component {
         <Header/>
         <main className={styles.main}>
           <Sidebar/>
-          <section className="pageContainer">
+          <section className={styles.pageContainer}>
             {this.props.children}
           </section>
         </main>

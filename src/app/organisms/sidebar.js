@@ -8,9 +8,9 @@ export class Sidebar extends Component {
     return (
       <nav className={styles.container}>
         <ul role="nav" className={styles.list}>
-          <li className={styles.listItem}><IndexLink to="/">Home</IndexLink></li>
-          <li className={styles.listItem}><NavLink to="/components">Components</NavLink></li>
-          <li className={styles.listItem}><NavLink to="/prototypes">Prototypes</NavLink></li>
+          <li className={styles.listItem}><IndexLink to="/" activeClassName={styles.active}>Home</IndexLink></li>
+          <li className={styles.listItem}><NavLink to="/components" activeClassName={styles.active}>Components</NavLink></li>
+          <li className={styles.listItem}><NavLink to="/prototypes" activeClassName={styles.active}>Prototypes</NavLink></li>
         </ul>
       </nav>
     );

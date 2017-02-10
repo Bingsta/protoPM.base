@@ -10,6 +10,7 @@ import {Components} from './app/pages/components';
 import {Prototypes} from './app/pages/prototypes';
 
 import './index.less';
+import './content/theme/bootstrap.global.less';
 
 ReactDOM.render(
   <Router history={browserHistory}>

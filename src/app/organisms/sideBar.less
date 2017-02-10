@@ -1,6 +1,8 @@
 .container {
-  width:250px;
-  border:1px solid red;
+  box-sizing:border-box;
+  width:290px;
+  padding:100px 0px 20px 20px;
+  border-right:1px solid rgba(0,0,0,0.06);
 }
 
 .list{
@@ -12,7 +14,21 @@
 .listItem{
   a{
     display:block;
-    padding:4px;
+    padding:6px 10px 6px 10px;
+    border-right:10px solid transparent;
+
+    text-decoration: none;
     color:rgba(0,0,0,0.85);
+    text-align: right;
+  }
+  a.active{
+    border-right:10px solid rgba(0,0,0,0.04);
+    font-weight:bold;
+  }
+  a:hover{
+    background-color:rgba(0,0,0,0.02);
+    border-right:10px solid rgba(0,0,0,0.04);
+
+    text-decoration: none;
   }
 }

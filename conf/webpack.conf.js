@@ -24,11 +24,24 @@ module.exports = {
         enforce: 'pre'
       },
       {
-        test: /\.(css|less)$/,
+        test: /^((?!\.global).)*(less|css)$/,
+        exclude:"/theme/",
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader', 
           loader:['css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader', 'less-loader']
         }) 
+      },
+      {
+        test: /\.global.less$/,
+        loader: 'style-loader!css-loader!less-loader'
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+        loader: 'url-loader?limit=10000',
+      }, 
+      {
+        test: /\.(eot|ttf|wav|mp3)$/,
+        loader: 'file-loader',
       },
       {
         test: /\.js$/,
