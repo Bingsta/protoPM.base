@@ -1,0 +1,57 @@
+[
+    {
+      "id": "1",
+      "property": {
+        "id": "1"
+      },
+      "type": "Gas safety",
+      "from": "",
+      "to": "",
+      "received": "",
+      "status": "Active"
+    },
+    {
+      "id": "2",
+      "property": {
+        "id": "1"
+      },
+      "type": "Gas safety",
+      "from": "",
+      "to": "",
+      "received": "",
+      "status": "Active"
+    },
+    {
+      "id": "3",
+      "property": {
+        "id": "1"
+      },
+      "type": "Gas safety",
+      "from": "",
+      "to": "",
+      "received": "",
+      "status": "Active"
+    },
+    {
+      "id": "4",
+      "property": {
+        "id": "2"
+      },
+      "type": "Gas safety",
+      "from": "",
+      "to": "",
+      "received": "",
+      "status": "Active"
+    },
+    {
+      "id": "5",
+      "property": {
+        "id": "2"
+      },
+      "type": "Gas safety",
+      "from": "",
+      "to": "",
+      "received": "",
+      "status": "Active"
+    }
+]

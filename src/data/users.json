@@ -1,0 +1,146 @@
+[
+  {
+    "id": "1",
+    "name": {
+      "title" : "Mr.",
+      "firstname" : "Sean",
+      "middlename" : null,
+      "surname" : "Hunter",
+      "formal" : "Mr. Sean Hunter",
+      "informal" : "Sean Hunter"
+    },
+    "contact": {
+      "email": "sean.hunter@freds.com",
+      "tel": [
+        {
+          "name": "mobile",
+          "no": "073829821"
+        },
+        {
+          "name": "office",
+          "no": "03822 098237"
+        }
+      ]
+    },
+    "avatar": {
+      "src": "1.jpg"
+    },
+    "job": {
+      "name": "Negotiator"
+    },
+    "branches": [
+      {
+        "id": "1",
+        "name": "Swansea branch"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": {
+      "title" : "Mrs.",
+      "firstname" : "Laura",
+      "middlename" : "Rachel",
+      "surname" : "Whip",
+      "formal" : "Mrs. Laura R Whip",
+      "informal" : "Laura Whip"
+    },
+    "contact": {
+      "email": "laura.whip@freds.com",
+      "tel": [
+        {
+          "name": "mobile",
+          "no": "02938342"
+        },
+        {
+          "name": "office",
+          "no": "03822 0489392"
+        }
+      ]
+    },
+    "avatar": {
+      "src": "2.jpg"
+    },
+    "job": {
+      "name": "Property manager"
+    },
+    "branches": [
+      {
+        "id": "1",
+        "name": "Swansea branch"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": {
+      "title" : "Mrs.",
+      "firstname" : "Domonique",
+      "middlename" : "Victoria",
+      "surname" : "Penny",
+      "formal" : "Mrs. Domonique V Penny",
+      "informal" : "Domonique Penny"
+    },
+    "contact": {
+      "email": "Domonique.Penny@freds.com",
+      "tel": [
+        {
+          "name": "mobile",
+          "no": "02938342"
+        },
+        {
+          "name": "office",
+          "no": "03822 0489392"
+        }
+      ]
+    },
+    "avatar": {
+      "src": "3.jpg"
+    },
+    "job": {
+      "name": "Accounts"
+    },
+    "branches": [
+      {
+        "id": "1",
+        "name": "Swansea branch"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": {
+      "title" : "Mrs.",
+      "firstname" : "Diane",
+      "middlename" : null,
+      "surname" : "Williams",
+      "formal" : "Mrs. Diane Williams",
+      "informal" : "Diane Williams"
+    },
+    "contact": {
+      "email": "diane.williams@freds.com",
+      "tel": [
+        {
+          "name": "mobile",
+          "no": "02938342"
+        },
+        {
+          "name": "office",
+          "no": "03822 0489392"
+        }
+      ]
+    },
+    "avatar": {
+      "src": "4.jpg"
+    },
+    "job": {
+      "name": "Administration"
+    },
+    "branches": [
+      {
+        "id": "1",
+        "name": "Swansea branch"
+      }
+    ]
+  }
+]

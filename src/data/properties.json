@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1",
+    "address": {
+      "nameNumber": "123",
+      "street1": "Arcacia Avenue",
+      "street2": null,
+      "town": "Bishopston",
+      "city": "Swansea",
+      "county": "West Glamorgan",
+      "postcode": "SA3 8DR"
+    },
+    "details": {
+      "type": {
+        "id": "1"
+      },
+      "rooms": {
+        "bedrooms": 3,
+        "receptions": 1,
+        "bathrooms": 1,
+        "others": 1
+      }
+    },
+    "landlords": {
+      "id": "1"
+    }
+  },
+  {
+    "id": "2",
+    "address": {
+      "nameNumber": "123",
+      "street1": "Arcacia Avenue",
+      "street2": null,
+      "town": "Bishopston",
+      "city": "Swansea",
+      "county": "West Glamorgan",
+      "postcode": "SA3 8DR"
+    },
+    "details": {
+      "type": {
+        "id": "1"
+      },
+      "rooms": {
+        "bedrooms": 3,
+        "receptions": 1,
+        "bathrooms": 1,
+        "others": 1
+      }
+    },
+    "landlords": {
+      "id": "2"
+    }
+  }
+]

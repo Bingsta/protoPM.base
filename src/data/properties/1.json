@@ -1,0 +1,25 @@
+{
+  "id": "1",
+  "address": {
+    "street1": "",
+    "street2": "",
+    "town": "",
+    "city": "",
+    "county": "",
+    "postcode": ""
+  },
+  "details": {
+    "type": {
+      "id": "1"
+    },
+    "rooms": {
+      "bedrooms": 3,
+      "receptions": 1,
+      "bathrooms": 1,
+      "others": 1
+    }
+  },
+  "landlords": {
+    "id": "1"
+  }
+}

@@ -8,14 +8,14 @@ export class Main extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <Header/>
+        <Sidebar/>
         <main className={styles.main}>
-          <Sidebar/>
+          <Header/>
           <section className={styles.pageContainer}>
             {this.props.children}
           </section>
+          <Footer/>
         </main>
-        <Footer/>
       </div>
     );
   }

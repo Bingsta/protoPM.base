@@ -1,18 +1,50 @@
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "../content/theme/variables.less";
+@import "../content/theme/mixins.less";
+
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   min-height: 100%;
-  align-items:center;
 }
 
 .main {
-  width:100%;
   flex: 1;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  width:~"calc(100% - 40px)";
+  width:~"calc(100% - 40px)";
+
+  margin-left:40px;
 }
 
 .pageContainer{
   box-sizing:border-box;
   width:100%;
+  flex:1;
 }
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { 
+  .main{
+    width:~"calc(100% - 40px)";
+    max-width:~"calc(100% - 40px)";
+    margin-left:40px;
+  }
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+  .main{
+    margin-left:210px;
+    width:~"calc(100% - 210px)";
+    max-width:~"calc(100% - 210px)";
+  }
+ }
