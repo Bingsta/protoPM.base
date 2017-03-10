@@ -13,7 +13,7 @@ import {
   ButtonGroup,
   Button} from 'react-bootstrap';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-import Notifications, {notify} from 'react-notify-toast';
+import AlertContainer from 'react-alert';
 
 const products = [
   {
@@ -43,7 +43,12 @@ export class Components extends Component {
   constructor(props, context) {
     super(props, context);
 
-    // this.ToastMessageFactory = React.createFactory(ReactToastr.ToastMessage.animation);
+    this.alertOptions = {
+      offset: 14,
+      position: 'bottom right',
+      time: 5000,
+      transition: 'scale'
+    };
 
     this.state = {
       modal: false
@@ -84,8 +89,11 @@ export class Components extends Component {
 
   handleShowToast() {
     console.log(`show toast`);
-    const myColor = {background: '#80d0c7', text: "#FFFFFF"};
-    notify.show("this is sample text", "custom", 5000, myColor);
+    this.refs.msg.show('Some text or component', {
+      time: 2000,
+      type: 'success',
+      icon: <i className="icon-checkmark"></i>
+    });
   }
   render() {
     return (
@@ -305,7 +313,8 @@ export class Components extends Component {
 
         <h2>Toast</h2>
         <Button bsStyle="primary" onClick={this.handleShowToast}>Show toast</Button>
-        <Notifications/>
+        <AlertContainer ref="msg" {...this.alertOptions}/>
+
         <h2>Navs</h2>
         <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
           <NavItem eventKey="1" href="/home">NavItem 1 content</NavItem>
