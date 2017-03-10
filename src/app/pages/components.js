@@ -42,9 +42,13 @@ export class Components extends Component {
   constructor(props, context) {
     super(props, context);
 
+    // this.ToastMessageFactory = React.createFactory(ReactToastr.ToastMessage.animation);
+
     this.state = {
       modal: false
     };
+
+    this.container = "container";
 
     this.handleOnSelectAlert = this.handleOnSelectAlert.bind(this);
     this.handleShowModal = this.handleShowModal.bind(this);
@@ -293,7 +297,6 @@ export class Components extends Component {
         </Modal>
 
         <h2>Navs</h2>
-
         <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
           <NavItem eventKey="1" href="/home">NavItem 1 content</NavItem>
           <NavItem eventKey="2" title="Item">NavItem 2 content</NavItem>

@@ -1,0 +1,84 @@
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "../../content/theme/variables.less";
+@import "../../content/theme/mixins.less";
+
+.header{
+
+}
+
+.toolIcon{
+  font-size: @font-size-large;
+}
+
+.addButton{
+  background-color:@brand-accent !important;
+  color:rgba(255,255,255,0.85) !important;
+}
+
+.addButton:hover {
+  background-color:darken(@brand-accent, 5%) !important;
+}
+
+button.avatarButton, button.avatarButton:link, button.avatarButton:hover, button.avatarButton:focus, button.avatarButton:active{
+  height:100%;
+  background-color:transparent !important;
+  border:none;
+  color:@navbar-inverse-link-color !important;
+  padding:12px 30px 0 30px;
+  margin:0;
+  border-radius: 0px;
+}
+
+button.avatarButton:hover{
+  color:@navbar-inverse-link-hover-color !important;
+}
+
+
+:global(.headroom--pinned){
+  margin-left:40px;
+  width:~"calc(100% - 40px)";
+}
+:global(.headroom--scrolled){
+  margin-left:40px;
+  width:~"calc(100% - 40px)";
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { 
+  :global(.headroom--pinned){
+    margin-left:40px;
+    width:~"calc(100% - 40px)";
+    :gloabl(.navbar-collapse){
+      margin-left:0;
+    }
+  }
+  :global(.headroom--scrolled){
+    margin-left:40px;
+    width:~"calc(100% - 40px)";
+    :gloabl(.navbar-collapse){
+      margin-left:0;
+    }
+  }
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+  :global(.headroom--pinned){
+    margin-left:210px;
+    width:~"calc(100% - 210px)";
+    :gloabl(.navbar-collapse){
+      margin-left:0;
+    }
+  }
+  :global(.headroom--scrolled){
+    margin-left:210px;
+    width:~"calc(100% - 210px)";
+    :gloabl(.navbar-collapse){
+      margin-left:0;
+    }
+  }
+ }

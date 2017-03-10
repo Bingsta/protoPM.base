@@ -42,25 +42,26 @@
   display:flex;
   justify-content: flex-end;
   align-items:center;
+  height:100%;
 }
 
 .globalToolList{
   list-style:none;
   padding:0;
-  margin:10px;
+  margin:0 20px 0 10px;
   display:flex;
+  height:100%;
 }
 
 .globalToolListItem{
   margin:0;
   padding:0;
-  width:34px;
-  height:34px;
+  height:100%;
 }
 
-.globalToolListItem + .globalToolListItem{
-  margin-left:5px;
-}
+// .globalToolListItem + .globalToolListItem{
+//   margin-left:5px;
+// }
 
 .tool{
   color:@navbar-inverse-link-color;
@@ -72,19 +73,39 @@
   display:flex;
   align-items:center;
   justify-content: center;
+  padding:0 20px;
 }
 
-.tool:hover{
+
+.tool:hover, .tool:active, .tool:focus{
   color:@navbar-inverse-link-hover-color;
   text-decoration:none;
+  background-color:rgba(255,255,255,0.2);
+  outline: none;
 }
 
-.avatar{
-  width:40px;
-  height:40px;
-  background-color:#555;
-  background-image:url(../../content/images/avatars/2.jpg);
-  background-size: cover;
+button.avatarButton, button.avatarButton:link, button.avatarButton:hover, button.avatarButton:focus, button.avatarButton:active{
+  height:100%;
+  background-color:transparent !important;
+  border:none;
+  color:@navbar-inverse-link-color !important;
+  padding:0;
+  margin:0;
+  border-radius: 0px;
+}
+
+button.avatarButton:hover{
+  color:@navbar-inverse-link-hover-color !important;
+}
+
+.header{
+  :global(.open){
+    button.avatarButton, button.avatarButton:link, button.avatarButton:hover, button.avatarButton:focus, button.avatarButton:active{
+      background-color:transparent !important;
+      border:none;
+      color:@navbar-inverse-link-hover-color !important;
+    }
+  }
 }
 
 /* Small devices (tablets, 768px and up) */

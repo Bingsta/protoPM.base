@@ -7,12 +7,17 @@
 @import "../../content/theme/mixins.less";
 
 
-footer {
+.footer {
   min-width:100%;
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: 1rem;
   
-  background-color:#1f1f1f;
+  background-color:@footer-bg;
   text-align: center;
-  color: white;
+  color: @footer-color;
+}
+
+.link{
+  color: @footer-color;
+  text-decoration: underline;
 }

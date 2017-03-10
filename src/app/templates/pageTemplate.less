@@ -11,15 +11,16 @@
 }
 .header{
   box-sizing:border-box;
-  height:80px;
-  padding:5px 20px 5px 20px;
+  height:120px;
+  padding:5px @grid-gutter-width 5px @grid-gutter-width;
 
-  border-bottom:1px solid @gray-lighter;
-  background-color:rgba(0,0,0,0.6);
+  display:flex;
+  align-items:flex-end;
+
+  background-color:@gray-lighter;
 }
 .title{
-  color:rgba(255,255,255, 0.85);
 }
 .content{
-  padding:20px 20px 60px 20px;
+  padding:20px @grid-gutter-width 60px @grid-gutter-width;
 }

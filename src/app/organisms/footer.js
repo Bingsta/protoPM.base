@@ -6,7 +6,7 @@ export class Footer extends Component {
     return (
       <footer className={styles.footer}>
         Build with ♥ by the&nbsp;
-        <a>
+        <a className={styles.link}>
           dezrez product team
         </a>
       </footer>
