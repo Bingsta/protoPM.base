@@ -11,16 +11,19 @@
 }
 .header{
   box-sizing:border-box;
-  height:140px;
+  height:100px;
   padding:5px @grid-gutter-width 5px @grid-gutter-width;
 
   display:flex;
   align-items:flex-end;
 
-  background-image: linear-gradient(to top, #f5f7fa 0%, #c3cfe2 100%);
-  border-bottom: 1px solid @brand-primary;
+  //background-image: linear-gradient(to top, #f5f7fa 0%, #c3cfe2 100%);
+  background-color: @navbar-default-bg;
+  //background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
+  border-bottom: 1px solid #ccc;
 }
 .title{
+  //color: lighten(@brand-primary, 10%);
 }
 .content{
   padding:20px @grid-gutter-width 60px @grid-gutter-width;

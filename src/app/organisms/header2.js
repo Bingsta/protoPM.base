@@ -63,8 +63,13 @@ export class Header2 extends Component {
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <MenuItem eventKey="1"><i className="icon-user-plus"></i>&nbsp;&nbsp;Add a new client</MenuItem>
-                    <MenuItem eventKey="2"><i className="icon-calendar2"></i>&nbsp;&nbsp;Add a new appointment</MenuItem>
-                    <MenuItem eventKey="3" active><i className="icon-checkbox-checked"></i>&nbsp;&nbsp;Add a new reminder</MenuItem>
+                    <MenuItem eventKey="2"><i className="icon-user-tie"></i>&nbsp;&nbsp;Add a new supplier</MenuItem>
+                    <MenuItem divider/>
+                    <MenuItem eventKey="3"><i className="icon-home2"></i>&nbsp;&nbsp;Add a new property</MenuItem>
+                    <MenuItem eventKey="4"><i className="icon-certificate"></i>&nbsp;&nbsp;Add a new tenancy</MenuItem>
+                    <MenuItem divider/>
+                    <MenuItem eventKey="5"><i className="icon-calendar2"></i>&nbsp;&nbsp;Add a new appointment</MenuItem>
+                    <MenuItem eventKey="6"><i className="icon-checkbox-checked"></i>&nbsp;&nbsp;Add a new reminder</MenuItem>
                   </Dropdown.Menu>
                 </Dropdown>
               </Nav>
@@ -74,9 +79,9 @@ export class Header2 extends Component {
                     Lee Crosby&nbsp;&nbsp;<Image src="../../content/images/avatars/2.jpg" height="35" circle/>
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
-                    <MenuItem eventKey="1"><i className="icon-equalizer"></i>&nbsp;&nbsp;Settings</MenuItem>
+                    <MenuItem eventKey="1"><i className="icon-equalizer"></i>&nbsp;&nbsp;Account settings</MenuItem>
                     <MenuItem eventKey="2"><i className="icon-pencil"></i>&nbsp;&nbsp;Another action</MenuItem>
-                    <MenuItem eventKey="3" active><i className="icon-bookmark2"></i>&nbsp;&nbsp;Active Item</MenuItem>
+                    <MenuItem eventKey="3"><i className="icon-bookmark2"></i>&nbsp;&nbsp;Yet another action</MenuItem>
                     <MenuItem divider/>
                     <MenuItem eventKey="4"><i className="icon-exit"></i>&nbsp;&nbsp;Log out</MenuItem>
                   </Dropdown.Menu>

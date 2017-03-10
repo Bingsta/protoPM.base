@@ -13,6 +13,7 @@ import {
   ButtonGroup,
   Button} from 'react-bootstrap';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import Notifications, {notify} from 'react-notify-toast';
 
 const products = [
   {
@@ -55,6 +56,7 @@ export class Components extends Component {
     this.handleHideModal = this.handleHideModal.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.priceFormatter = this.priceFormatter.bind(this);
+    this.handleShowToast = this.handleShowToast.bind(this);
   }
 
   priceFormatter(cell) {
@@ -80,6 +82,11 @@ export class Components extends Component {
     console.log(`selected ${eventKey}`);
   }
 
+  handleShowToast() {
+    console.log(`show toast`);
+    const myColor = {background: '#80d0c7', text: "#FFFFFF"};
+    notify.show("this is sample text", "custom", 5000, myColor);
+  }
   render() {
     return (
       <PageTemplate title="Components">
@@ -296,6 +303,9 @@ export class Components extends Component {
           </Modal.Footer>
         </Modal>
 
+        <h2>Toast</h2>
+        <Button bsStyle="primary" onClick={this.handleShowToast}>Show toast</Button>
+        <Notifications/>
         <h2>Navs</h2>
         <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
           <NavItem eventKey="1" href="/home">NavItem 1 content</NavItem>

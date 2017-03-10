@@ -27,7 +27,9 @@
   //background-image: linear-gradient(to bottom, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
   //background-image: linear-gradient(to bottom, #2b5876 0%, #4e4376 100%);
   transition:width 0.2s ease-in-out,
-  min-width 0.2s ease-in-out,
+  min-width 0.2s ease-in-out;
+
+  border-right:1px solid darken(@brand-primary, 5%);
 }
 
 .navText{
@@ -65,6 +67,7 @@
   overflow-x: hidden;
   text-overflow: clip;
   white-space: nowrap;
+  width:~"calc(100% + 1px)";
 
   a{
     display:block;

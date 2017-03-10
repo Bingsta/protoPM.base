@@ -9,15 +9,16 @@
 
 .footer {
   min-width:100%;
-  padding: 1rem;
+  padding: 2rem;
   font-size: 1rem;
-  
-  background-color:@footer-bg;
+
+  background-image: linear-gradient(to bottom, darken(@navbar-default-bg, 10%) 0%, @navbar-default-bg 100%);
+  //background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
+  border-top: 1px solid darken(#ddd, 5%);
+
   text-align: center;
-  color: @footer-color;
 }
 
 .link{
-  color: @footer-color;
   text-decoration: underline;
 }
