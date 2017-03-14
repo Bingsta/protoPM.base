@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Mr & Mrs Jones",
+    "contacts": [
+      1,2
+    ],
+    "roles": {
+      "landlord": [
+        1
+      ],
+      "tenant": []
+    }
+  },
+  {
+    "id": "2",
+    "name": "Mr & Mrs Smith",
+    "contacts": [
+      3,4
+    ],
+    "roles": {
+      "landlord": [],
+      "tenant": [1]
+    }
+  }
+]

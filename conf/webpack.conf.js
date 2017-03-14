@@ -7,7 +7,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FailPlugin = require('webpack-fail-plugin');
 const autoprefixer = require('autoprefixer');
 
-
 module.exports = {
   module: {
     loaders: [

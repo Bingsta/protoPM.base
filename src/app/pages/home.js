@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import {PageTemplate} from '../templates/pageTemplate';
+import {DashboardTemplate} from '../templates/dashboardTemplate';
 
 export class Home extends Component {
   render() {
-    return (<PageTemplate title="Home">
+    return (<DashboardTemplate title="Home dashboard">
       <h2>Home content</h2>
-    </PageTemplate>);
+      <h4>Home content</h4>
+    </DashboardTemplate>);
   }
 }

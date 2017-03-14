@@ -1,0 +1,58 @@
+[
+    {
+      "id": "1",
+      "property": {
+        "id": "1"
+      },
+      "type": "Energy",
+      "provider": "British gas",
+      "meterReadings": [
+        {
+          "reading": "98734",
+          "date": ""
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "property": {
+        "id": "1"
+      },
+      "type": "Energy",
+      "provider": "British gas",
+      "meterReadings": [
+        {
+          "reading": "98734",
+          "date": ""
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "property": {
+        "id": "2"
+      },
+      "type": "Energy",
+      "provider": "British gas",
+      "meterReadings": [
+        {
+          "reading": "98734",
+          "date": ""
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "property": {
+        "id": "2"
+      },
+      "type": "Energy",
+      "provider": "British gas",
+      "meterReadings": [
+        {
+          "reading": "98734",
+          "date": ""
+        }
+      ]
+    }
+]

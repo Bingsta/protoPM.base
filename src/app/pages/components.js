@@ -13,6 +13,7 @@ import {
   ButtonGroup,
   Button} from 'react-bootstrap';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import AlertContainer from 'react-alert';
 
 const products = [
   {
@@ -42,15 +43,25 @@ export class Components extends Component {
   constructor(props, context) {
     super(props, context);
 
+    this.alertOptions = {
+      offset: 14,
+      position: 'bottom right',
+      time: 5000,
+      transition: 'scale'
+    };
+
     this.state = {
       modal: false
     };
+
+    this.container = "container";
 
     this.handleOnSelectAlert = this.handleOnSelectAlert.bind(this);
     this.handleShowModal = this.handleShowModal.bind(this);
     this.handleHideModal = this.handleHideModal.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.priceFormatter = this.priceFormatter.bind(this);
+    this.handleShowToast = this.handleShowToast.bind(this);
   }
 
   priceFormatter(cell) {
@@ -76,6 +87,14 @@ export class Components extends Component {
     console.log(`selected ${eventKey}`);
   }
 
+  handleShowToast() {
+    console.log(`show toast`);
+    this.refs.msg.show('Some text or component', {
+      time: 2000,
+      type: 'success',
+      icon: <i className="icon-checkmark"></i>
+    });
+  }
   render() {
     return (
       <PageTemplate title="Components">
@@ -292,8 +311,11 @@ export class Components extends Component {
           </Modal.Footer>
         </Modal>
 
-        <h2>Navs</h2>
+        <h2>Toast</h2>
+        <Button bsStyle="primary" onClick={this.handleShowToast}>Show toast</Button>
+        <AlertContainer ref="msg" {...this.alertOptions}/>
 
+        <h2>Navs</h2>
         <Nav bsStyle="tabs" activeKey="1" onSelect={this.handleSelect}>
           <NavItem eventKey="1" href="/home">NavItem 1 content</NavItem>
           <NavItem eventKey="2" title="Item">NavItem 2 content</NavItem>

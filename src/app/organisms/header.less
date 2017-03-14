@@ -9,14 +9,23 @@
 .header {
   display: flex;
   align-items: stretch;
+  
+  box-sizing:border-box;
+  height:60px;
+  min-width:100%;
+  padding:0 20px;
+
   background-color: rgba(0,0,0,0.85);
   color:rgba(255,255,255,0.85);
-  min-width:100%;
-  padding:10px 0;
 }
 
-.logoContainer{
-  width:210px;
+:global(.headroom--pinned){
+  margin-left:40px;
+  width:~"calc(100% - 40px)";
+}
+:global(.headroom--scrolled){
+  margin-left:40px;
+  width:~"calc(100% - 40px)";
 }
 
 .searchContainer{
@@ -30,5 +39,95 @@
 
 .globalToolsContainer{
   flex:1;
-  
+  display:flex;
+  justify-content: flex-end;
+  align-items:center;
+  height:100%;
 }
+
+.globalToolList{
+  list-style:none;
+  padding:0;
+  margin:0 20px 0 10px;
+  display:flex;
+  height:100%;
+}
+
+.globalToolListItem{
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+// .globalToolListItem + .globalToolListItem{
+//   margin-left:5px;
+// }
+
+.tool{
+  color:@navbar-inverse-link-color;
+  text-decoration:none;
+  font-size:@font-size-large;
+  display:block;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  padding:0 20px;
+}
+
+
+.tool:hover, .tool:active, .tool:focus{
+  color:@navbar-inverse-link-hover-color;
+  text-decoration:none;
+  background-color:rgba(255,255,255,0.2);
+  outline: none;
+}
+
+button.avatarButton, button.avatarButton:link, button.avatarButton:hover, button.avatarButton:focus, button.avatarButton:active{
+  height:100%;
+  background-color:transparent !important;
+  border:none;
+  color:@navbar-inverse-link-color !important;
+  padding:0;
+  margin:0;
+  border-radius: 0px;
+}
+
+button.avatarButton:hover{
+  color:@navbar-inverse-link-hover-color !important;
+}
+
+.header{
+  :global(.open){
+    button.avatarButton, button.avatarButton:link, button.avatarButton:hover, button.avatarButton:focus, button.avatarButton:active{
+      background-color:transparent !important;
+      border:none;
+      color:@navbar-inverse-link-hover-color !important;
+    }
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { 
+  :global(.headroom--pinned){
+    margin-left:40px;
+    width:~"calc(100% - 40px)";
+  }
+  :global(.headroom--scrolled){
+    margin-left:40px;
+    width:~"calc(100% - 40px)";
+  }
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+  :global(.headroom--pinned){
+    margin-left:210px;
+    width:~"calc(100% - 210px)";
+  }
+  :global(.headroom--scrolled){
+    margin-left:210px;
+    width:~"calc(100% - 210px)";
+  }
+ }

@@ -6,30 +6,69 @@
 @import "../../content/theme/variables.less";
 @import "../../content/theme/mixins.less";
 
+
 .container {
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: @zindex-navbar-fixed;
+
   box-sizing:border-box;
-  min-width:210px;
-  width:210px;
-  background-color:rgba(0,0,0,0.80);
+  height:100%;
+  max-height:100%;
+  min-width:40px;
+  width:40px;
+
+  //background-color:darken(@brand-primary, 10%);
+  background-image: linear-gradient(to bottom, @brand-primary 0%, @brand-primary2 100%);
+  //background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  //background-image: linear-gradient(to top, #4e4376 0%, #2b5876 100%);
+  //background-image: linear-gradient(to top, #243949 0%, #517fa4 100%);
+  //background-image: linear-gradient(to bottom, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  //background-image: linear-gradient(to bottom, #2b5876 0%, #4e4376 100%);
+  transition:width 0.2s ease-in-out,
+  min-width 0.2s ease-in-out;
+
+  border-right:1px solid darken(@brand-primary, 5%);
+}
+
+.navText{
+  display:inline;
+  margin-left:15px;
 }
 
 .logo{
   width:100%;
-  height:80px;
-  background-color:rgba(255,255,255,0.1);
+  height:60px;
+
   background-image:url(../../content/images/pm-logo.svg);
-  background-size:40px;
+  background-size:60%;
   background-repeat:no-repeat;
-  background-position:center;
+  background-position:20px center;
+  background-color:darken(@brand-primary, 5%);
+}
+
+.agentLogo{
+  height:80px;
+  color:lighten(@brand-primary, 5%);
+  background-color:darken(@brand-primary,10%);
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .list{
   list-style: none;
   padding:0;
-  margin:0;
+  margin:30px 0 0 0;
 }
 
 .listItem{
+  overflow-x: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  width:~"calc(100% + 1px)";
+
   a{
     display:block;
     padding:6px 10px 6px 10px;
@@ -37,18 +76,108 @@
 
     text-decoration: none;
     color:rgba(255,255,255,0.85);
-    text-align: right;
+    text-align: left;
+    text-overflow: clip;
+
+    transition: padding 0.2s ease-in-out;
   }
-  a.active{
-    border-right:10px solid rgba(255,255,255,0.3);
+  a.active, a.active:hover, a:focus{
+    background-color:darken(@brand-primary, 2%);
+    border-right:2px solid @brand-accent;
     color:rgba(255,255,255,0.85);
     text-decoration: none;
-    font-weight:bold;
+    font-weight:600;
   }
-  a:hover, a:focus{
-    background-color:rgba(255,255,255,0.15);
-    border-right:10px solid rgba(255,255,255,0.3);
+  a:hover{
+    background-color:lighten(@brand-primary, 2%);
+    border-right:2px solid @brand-accent;
     color:rgba(255,255,255,0.85);
     text-decoration: none;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,1);
   }
 }
+
+.listItemOpen {
+  i{
+    transition: transform 0.2s ease-in-out;
+    transform: rotate(0deg);
+    display:inline-block;
+  }
+  a:hover {
+    border-right:none;
+    background-color: transparent;
+    cursor: pointer;
+    // transform: scale(1.2);  
+    // transform-origin: center;
+    // transition: transform 0.1s ease-in-out;
+  }
+}
+
+// Sidebar open condition
+.open {
+  width:210px;
+  min-width:210px;
+  .logo{
+    background-image:url(../../content/images/pm-logo-text-white.svg);
+  }
+  
+  .listItem{
+    a{
+      padding:6px 20px 6px 30px;
+    }
+  }
+  
+  .listItemOpen {
+    i{
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// .navText{
+//   display:none;
+// }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { 
+  .container{
+    width:40px;
+    min-width:40px;
+  }
+  .logo{
+    background-image:url(../../content/images/pm-logo.svg);
+  }
+  
+  .listItem{
+    a{
+      padding:6px 10px 6px 10px;
+    }
+  }
+  
+  // .navText{
+  //   display:none;
+  // }
+  
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+  .container{
+    width:210px;
+    min-width:210px;
+  }
+  .logo{
+    background-image:url(../../content/images/pm-logo-text-white.svg);
+  }
+  
+  .listItem{
+    a{
+      padding:6px 20px 6px 30px;
+    }
+  }
+  
+  // .navText{
+  //   display:inline;
+  //   margin-left:10px;
+  // }
+ }
