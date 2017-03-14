@@ -13,7 +13,7 @@ export class DashboardTemplate extends Component {
           <h1 className={styles.title}>{this.props.title}</h1>
         </header>
         <div className={styles.tabsContainer}>
-          <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+          <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
             <Tab eventKey={1} title="Tenancies">
               <h3>Tenancies</h3>
             </Tab>

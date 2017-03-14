@@ -44,7 +44,7 @@
   background-image:url(../../content/images/pm-logo.svg);
   background-size:60%;
   background-repeat:no-repeat;
-  background-position:center;
+  background-position:20px center;
   background-color:darken(@brand-primary, 5%);
 }
 
@@ -81,15 +81,15 @@
 
     transition: padding 0.2s ease-in-out;
   }
-  a.active{
-    background-color:darken(@brand-primary, 1%);
+  a.active, a.active:hover, a:focus{
+    background-color:darken(@brand-primary, 2%);
     border-right:2px solid @brand-accent;
     color:rgba(255,255,255,0.85);
     text-decoration: none;
     font-weight:600;
   }
-  a:hover, a:focus{
-    background-color:darken(@brand-primary, 1%);
+  a:hover{
+    background-color:lighten(@brand-primary, 2%);
     border-right:2px solid @brand-accent;
     color:rgba(255,255,255,0.85);
     text-decoration: none;
